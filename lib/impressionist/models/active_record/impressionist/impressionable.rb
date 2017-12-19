@@ -7,6 +7,5 @@ module Impressionist
   end
 
 end
-
 ActiveRecord::Base.
 send(:include, Impressionist::Impressionable)

@@ -4,6 +4,7 @@ module Impressionist
 
     module ClassMethods
       def is_impressionable(options={})
+        
         define_association
         @impressionist_cache_options = options
 

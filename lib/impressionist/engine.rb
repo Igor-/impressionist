@@ -4,6 +4,7 @@ module Impressionist
 
   initializer 'impressionist.model' do |app|
     @orm = Impressionist.orm
+    p @orm
     include_orm
   end
 
@@ -21,7 +22,7 @@ module Impressionist
  private
 
     def include_orm
-      require "#{root}/app/models/impressionist/impressionable.rb"
+      require "#{root}/lib/impressionist/models/impressionable.rb"
       require "impressionist/models/#{orm}/impression.rb"
       require "impressionist/models/#{orm}/impressionist/impressionable.rb"
     end

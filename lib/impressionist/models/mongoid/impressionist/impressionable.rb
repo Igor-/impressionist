@@ -1,12 +1,14 @@
 module Impressionist
   module Impressionable
-
+  
   # extends AS::Concern
+  #binding.pry
+
   include Impressionist::IsImpressionable
-
     # Overides impressionist_count in order to provide mongoid compability
+    p "load mongoid"
     def impressionist_count(options={})
-
+      p "exec mongoid"
       # Uses these options as defaults unless overridden in options hash
       options.reverse_merge!(:filter => :request_hash, :start_date => nil, :end_date => Time.now)
 
