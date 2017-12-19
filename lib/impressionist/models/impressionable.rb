@@ -27,17 +27,7 @@ module Impressionist
       end
 
     end # end of ClassMethods
-    #1/0
-    #binding.pry
-    p "load default"
-    def self.do_division_by_zero; 5 / 0; end
-
-    begin
-      do_division_by_zero
-    rescue Exception => exception
-      puts exception.backtrace
-      #raise # always reraise
-    end
+    
     def impressionist_count(options={})
       p "exec default"
       # Uses these options as defaults unless overridden in options hash
